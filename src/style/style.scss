@@ -1,0 +1,32 @@
+@use "_components.scss" as *;
+
+* {
+  font-family: "Inter", sans-serif;
+  background-color: #e5e5e5;
+}
+
+.default-btn {
+  @include default-btn;
+}
+
+.textbox {
+  @include textbox;
+}
+
+.error-textbox {
+  @include error-textbox;
+}
+
+.header {
+  padding: 64px 62.84px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo {
+  padding-top: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

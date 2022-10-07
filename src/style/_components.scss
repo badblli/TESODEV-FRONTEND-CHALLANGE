@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+$primary-color: #204080;
+$text-color: #ffffff;
+$hover-color: #4f75c2;
+$roboto-font: "Roboto", sans-serif;
+$textbox-border: 2px solid #484848;
+$textbox-text-color: #64646480;
+$text-box-hover: rgba(100, 100, 100, 0.08);
+$danger-text: rgba(255, 0, 0, 0.7);
+$danger-color: #ff0000;
+$danger-border: 2px solid #ff0000;
+
+@mixin default-btn($font-weight: 700) {
+  background-color: $primary-color;
+  color: $text-color;
+  font-family: $roboto-font;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: $font-weight;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+}
+
+@mixin textbox($font-weight: 700) {
+  border: $textbox-border;
+  border-radius: 8px;
+  background-color: $text-color;
+  padding: 10px;
+  color: #484848;
+  font-size: 16px;
+  font-weight: $font-weight;
+  font-family: $roboto-font;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: 2px solid rgba(72, 72, 72, 0.6);
+    background-color: $text-box-hover;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+  &::placeholder {
+    color: $textbox-text-color;
+  }
+}
+
+@mixin error-textbox($font-weight: 700) {
+  border: 2px solid $danger-color;
+  border-radius: 8px;
+  background-color: $text-color;
+  padding: 10px;
+  color: #484848;
+  font-size: 16px;
+  font-weight: $font-weight;
+  font-family: $roboto-font;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: 2px solid rgba(72, 72, 72, 0.6);
+    background-color: $text-box-hover;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+  &::placeholder {
+    color: rgba(255, 0, 0, 0.5);
+  }
+}
